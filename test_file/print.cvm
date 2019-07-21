@@ -1,0 +1,25 @@
+;TESTO MOV,ADD,SUB,MUL,DIV,PUSH,POP,PRINT,PRINT_STACK
+;ciao carico dei valori nello stack, stampo lo stack, carico i valori nei registri, stampo i registri
+
+
+
+
+
+
+main: 
+    MOV r0, 10
+    MOV r1, 0
+
+    MUL r0, r2
+
+    ;test test test
+    
+; ; ; ; ;  ; ;
+
+    POP r3
+    
+    
+
+    DISPLAY r3
+    
+    HALT

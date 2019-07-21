@@ -1,0 +1,25 @@
+;TESTO MOV,SUB,POP,JZ,J,POP,PUSH,HALT
+; somma dei primi n numeri interi 
+
+main:
+    MOV r0, 1
+    DISPLAY R0
+    MOV r1, 1
+    DISPLAY R1
+    MOV r2, 0       ;accumulatore 
+    DISPLAY R2     
+    MOV r3, 11      ;quanti numeri devo stampare (dove mi fermo)
+    DISPLAY R3
+loop: 
+    ;calccolo della condizione e push nello stack
+    SUB r1, r3
+    JZ exit_while
+    ADD r1, r2 
+    POP r2
+    ADD r1, r0
+    POP r1
+    JMP loop
+
+exit_while: 
+    DISPLAY r2
+    HALT

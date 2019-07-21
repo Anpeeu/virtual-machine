@@ -1,0 +1,25 @@
+;
+; funzione che somma i primi n numeri ricorsivamente
+
+
+sum_rec:
+    ;31 è il registro in cui salvo il valore di ritorno
+    PUSH r1
+    JNEG else
+    RET
+else:
+    MOV r2, 1
+    PUSH r1
+    ADD r1, r2
+    POP r1
+    CALL  sum_rec
+    POP r1
+    ADD r30, r1
+    POP r30
+    RET 
+
+main:
+    MOV r1 -8191
+    CALL sum_rec 
+    DISPLAY r30
+    HALT

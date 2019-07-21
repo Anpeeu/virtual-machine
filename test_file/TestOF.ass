@@ -1,0 +1,24 @@
+main:  ;test usato per controllare errori di OF
+    MOV R1 -2147483647
+    MOV R2 -1; ciao
+
+    DISPLAY R1
+    DISPLAY R2
+
+    ;ADD R1, R2
+    ;pop r3
+    ;DISPLAY r3
+    
+    ;SUB R1, R2
+    ;pop r3
+    ;DISPLAY r3
+    
+    ;MUL R1, R2
+    ;pop r3
+    ;DISPLAY r3
+    
+    MUL R1, R2
+    pop r3
+    DISPLAY r3
+    
+    DISPLAY R1 
