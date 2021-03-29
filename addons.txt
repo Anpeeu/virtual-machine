@@ -56,15 +56,3 @@ data la struttura utilizzata per poter implementare assembla(siamo passati da un
 se si volesse creare del codice macchina funzionante di cui però non si conosce il numero di righe basta mettere come prima riga  il label main: ed in automatico il file assemblato conterrà alla prima riga il numero esatto di righe di istruzioni.
 
 esempio: il file crash.ass presente nella cartella Test_file
-
-
-
-
-
-
-
-
-
-
-
-
