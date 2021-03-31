@@ -8,7 +8,7 @@ main:
     DISPLAY R1
     MOV r2, 0       ;accumulatore 
     DISPLAY R2     
-    MOV r3, 11      ;quanti numeri devo stampare (dove mi fermo)
+    MOV r3, 10      ;quanti numeri devo stampare (dove mi fermo)
     DISPLAY R3
 loop: 
     ;calccolo della condizione e push nello stack

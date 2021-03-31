@@ -1,8 +1,7 @@
-#  P1G94 854723 873888 
 objects = main.o err.o cpu.o istr.o coda.o io_function.o
 eseguibile = VM
 cflags = -g3 -fsanitize=address -fsanitize=undefined -std=gnu89 -pedantic-errors -Wall -Wextra 
-libs = -lm
+libs = #-lm
 
 $(eseguibile) : $(objects)
 	gcc $(cflags) -o $(eseguibile) $(objects) $(libs)
