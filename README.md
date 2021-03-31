@@ -3,7 +3,7 @@ Questo progetto è stato ideato come parte di laboratorio del linguaggio di prog
 Il progetto consisteva nell'eseguire del codice Assembly-like scritto in linguaggio macchina in base 10.
 Dalla consegna iniziale si sono volute aggiungere altre funzionalità, descritte in seguito.
 
-##Installazione sistema Unix
+## Installazione sistema Unix
 Copiare la cartella del progetto nel vostro computer, esempio tramite clone.
 - `git clone https://github.com/Anpeeu/virtual-machine.git`
 
