@@ -51,7 +51,7 @@ Esempio di assemblazione su il file while.ass dalla cartella principale del prog
 
 In caso di file scritto in codice macchina ma privo del numero di righe del programma alla prima riga, quindi contro le specifiche di progetto, se viene inserito il label del main `main:` compre prima riga del file e compilato il file il programma risolverà il problema.
 
-##Formato Assembly-like
+## Formato Assembly-like
 Questo formato si basa sulle istruzioni in formato Assembly-like, qui lo schema delle istruzioni supportate.
 
 Istruzione | CM | Descrizione
@@ -108,44 +108,4 @@ exit_while:
     DISPLAY r2
     HALT
 ```
-Specifiche dei file .ass
-
-Il formato .ass è la semplificazione del codice macchina .cvm e prende spunto dal linguaggio assembly.
-
-Si basa sull'implementazione dei LABEL,dei "segnalibri" che permettono una lettura e strutturazione del codice piu semplice ed immediata possibile anche grazie alla traduzione dei valori del linguaggio macchina nei loro corrispettivi testuali.
-
-Il formato .ass ha come primo carattere letto dal parser(quindi esclusi commenti e righe vuote) un testo seguito da il carattere :
- 
-ATTENZIONE il carattere : DEVE essere scritto attaccato al testo.
-
-esempio:   così funziona
-esempio : così non è riconosciuto.
-
-tali testi sono considerati LABEL.
-
-
-REGOLE del formato .ass
-
-1)per quanto i label possano essere scritti a fantasia  dell'utente, è NECESSARIO che sia presente UN label di tipo main:
-Tale label sarà il punto da cui parte il programma e non è necessario sia all'inizio del codice,può essere ovunque sempre rispettando le regole di scrittura.
-
-2)nessun label: può essere scritto più di una volta
-
-1) i richiami a tali label possono essere scritti quante volte si vogliono infatti l'utilizzo principale del label è per permettere al codice macchina di "Saltare" da un blocco all'altro del codice mantenendo però una scrittura pulita.
-
-es: 
-CALL  sum_rec
-
-farà passare il programma al testo specificato dopo il label sum_rec:
-
-
-
-(qualsiasi utilizzo o scrittura impropria di tali label sono considerati come ERRORI di programmazione e quindi hanno comportamenti non testabili e imprevisti in alcuni casi).
-
-
-SIDE EFFECT DI ASSEMBLA:
-data la struttura utilizzata per poter implementare assembla(siamo passati da un semplicissimo array dinamico ad una coda)
-se si volesse creare del codice macchina funzionante di cui però non si conosce il numero di righe basta mettere come prima riga  il label main: ed in automatico il file assemblato conterrà alla prima riga il numero esatto di righe di istruzioni.
-
-esempio: il file crash.ass presente nella cartella Test_file
 
