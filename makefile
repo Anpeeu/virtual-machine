@@ -25,6 +25,8 @@ coda.o : ./i_o/coda.c
 io_function.o : ./i_o/io_function.c
 	gcc $(cflags) -c ./i_o/io_function.c $(libs)
 
+
+#Funzioni di utilità 
 clean:
 	rm $(eseguibile)  $(objects)
 
